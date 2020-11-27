@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['addbackgroundtestentry',['AddBackgroundTestEntry',['../classubcc1pi_1_1BDTHelper_1_1BDTFactory.html#a99c9c125c648d900da85862f15482bb7',1,'ubcc1pi::BDTHelper::BDTFactory']]],
+  ['addbackgroundtrainingentry',['AddBackgroundTrainingEntry',['../classubcc1pi_1_1BDTHelper_1_1BDTFactory.html#a5f98f358c6f9c05e69e46355d1c0cbb2',1,'ubcc1pi::BDTHelper::BDTFactory']]],
+  ['addbootstrapweights',['AddBootstrapWeights',['../classubcc1pi_1_1CrossSectionHelper.html#a6b012eb2e32c978750f4f3c71d617bba',1,'ubcc1pi::CrossSectionHelper']]],
+  ['addcutline',['AddCutLine',['../classubcc1pi_1_1PlottingHelper_1_1MultiPlot.html#af90a86176217bb33834dfe7df4a2489a',1,'ubcc1pi::PlottingHelper::MultiPlot::AddCutLine()'],['../classubcc1pi_1_1PlottingHelper_1_1EfficiencyPlot.html#a89811d1042a166eacfbdd3a330ad03f7',1,'ubcc1pi::PlottingHelper::EfficiencyPlot::AddCutLine()']]],
+  ['addemptyrow',['AddEmptyRow',['../classubcc1pi_1_1FormattingHelper_1_1Table.html#a2eeb29892c0202b6a13188946c441d2a',1,'ubcc1pi::FormattingHelper::Table']]],
+  ['addentry',['AddEntry',['../classubcc1pi_1_1BDTHelper_1_1BDTFactory.html#ae1463462c8052800f15c3cf506eb35fc',1,'ubcc1pi::BDTHelper::BDTFactory']]],
+  ['addevent',['AddEvent',['../classubcc1pi_1_1PlottingHelper_1_1EfficiencyPlot.html#a4728fbbc3ace372a1d4f23b10a46d69c',1,'ubcc1pi::PlottingHelper::EfficiencyPlot']]],
+  ['addmutuallyexclusivesystematicweights',['AddMutuallyExclusiveSystematicWeights',['../classubcc1pi_1_1CrossSectionHelper.html#a71908a88f228fb4f5506c998469035f9',1,'ubcc1pi::CrossSectionHelper']]],
+  ['addneutrinoevent',['AddNeutrinoEvent',['../classubcc1pi_1_1CrossSectionHelper_1_1CrossSection.html#a043cad6b02dcdc610c528e50fbe3ac14',1,'ubcc1pi::CrossSectionHelper::CrossSection']]],
+  ['addselectedbackgroundevent',['AddSelectedBackgroundEvent',['../classubcc1pi_1_1CrossSectionHelper_1_1CrossSection.html#a79ad9664940d9b6fa00271ce2b3e87ed',1,'ubcc1pi::CrossSectionHelper::CrossSection']]],
+  ['addselectedbackgroundoverlayeventdetvar',['AddSelectedBackgroundOverlayEventDetVar',['../classubcc1pi_1_1CrossSectionHelper_1_1CrossSection.html#a328d51dadbfd1ff8281415618e568c1e',1,'ubcc1pi::CrossSectionHelper::CrossSection']]],
+  ['addselectedbnbdataevent',['AddSelectedBNBDataEvent',['../classubcc1pi_1_1CrossSectionHelper_1_1CrossSection.html#a655313e58f7c14aff3560c6b6a6e92a8',1,'ubcc1pi::CrossSectionHelper::CrossSection']]],
+  ['addsignalevent',['AddSignalEvent',['../classubcc1pi_1_1CrossSectionHelper_1_1CrossSection.html#a318d53013894328e59c86a2ad1f7704b',1,'ubcc1pi::CrossSectionHelper::CrossSection']]],
+  ['addsignaleventdetvar',['AddSignalEventDetVar',['../classubcc1pi_1_1CrossSectionHelper_1_1CrossSection.html#af6a15229a4500c9f6ffed02328a1c8e4',1,'ubcc1pi::CrossSectionHelper::CrossSection']]],
+  ['addsignaltestentry',['AddSignalTestEntry',['../classubcc1pi_1_1BDTHelper_1_1BDTFactory.html#a7200e0ee2e919084b90c7e4c1c72321f',1,'ubcc1pi::BDTHelper::BDTFactory']]],
+  ['addsignaltrainingentry',['AddSignalTrainingEntry',['../classubcc1pi_1_1BDTHelper_1_1BDTFactory.html#a060771d6bbf8a3a8a7d8d6315f87c483',1,'ubcc1pi::BDTHelper::BDTFactory']]],
+  ['addsystematicweights',['AddSystematicWeights',['../classubcc1pi_1_1CrossSectionHelper.html#aaafe85fe369c472a24dd5dd08d5663c7',1,'ubcc1pi::CrossSectionHelper']]],
+  ['addunitweights',['AddUnitWeights',['../classubcc1pi_1_1CrossSectionHelper.html#a58855378ce25418b999fc3baaee7ab53',1,'ubcc1pi::CrossSectionHelper::AddUnitWeights(const SystematicParamUniversesPairVector &amp;params, SystematicWeightsMap &amp;systWeightsMap)'],['../classubcc1pi_1_1CrossSectionHelper.html#a473df08fdd2987c75215fe929d718da6',1,'ubcc1pi::CrossSectionHelper::AddUnitWeights(const MutuallyExclusiveParamVector &amp;params, SystematicWeightsMap &amp;systWeightsMap)']]],
+  ['analysisfilewriter',['AnalysisFileWriter',['../classubcc1pi_1_1AnalysisFileWriter.html#a68ef91dc5cc94a0614faf72650079501',1,'ubcc1pi::AnalysisFileWriter']]],
+  ['analyze',['analyze',['../classubcc1pi_1_1AnalysisFileWriter.html#af9efc3e21b51cf391b8ce03da8b997df',1,'ubcc1pi::AnalysisFileWriter::analyze()'],['../classubcc1pi_1_1FileLocationDatabase.html#a0e941c59b554f52e0437190b796705ca',1,'ubcc1pi::FileLocationDatabase::analyze()']]],
+  ['assignpdgcode',['AssignPDGCode',['../classubcc1pi_1_1SelectionHelper_1_1EventSelection_1_1CutTracker.html#acbe0c309398c3065a52d26a72445d00f',1,'ubcc1pi::SelectionHelper::EventSelection::CutTracker']]]
+];
