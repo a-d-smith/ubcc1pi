@@ -117,7 +117,7 @@ void PlotInputVariables(const Config &config)
 
     PlottingHelper::MultiPlot muonBDTPlot("Muon BDT response", yLabel, 40, -0.85f, 0.50f);
     PlottingHelper::MultiPlot protonBDTPlot("Proton BDT response", yLabel, 40, -0.60f, 0.60f);
-    PlottingHelper::MultiPlot goldenPionBDTPlot("Golden pion BDT response", yLabel, 40, -0.8f, 0.4f);
+    PlottingHelper::MultiPlot goldenPionBDTPlot("Golden pion BDT response", yLabel, 40, -0.8f, 0.8f);
 
     std::shared_ptr<BDTHelper::BDT> pGoldenPionBDT, pProtonBDT, pMuonBDT;
     if (config.plotInputVariables.plotBDTResponses)

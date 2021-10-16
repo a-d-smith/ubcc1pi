@@ -9,6 +9,7 @@
 
 #include "ubcc1pi_standalone/Helpers/CrossSectionHelper.h"
 #include "ubcc1pi_standalone/Helpers/PlottingHelper.h"
+#include "ubcc1pi_standalone/Helpers/FormattingHelper.h"
 
 using namespace ubcc1pi;
 
@@ -22,6 +23,7 @@ void PlotFlux(const Config &config)
 
     // Setup a map to hold the flux histograms
     std::map< int, std::shared_ptr<TH1F> > histMap;
+    std::map< int, float > totalFluxMap;
 
     // The maximum & minimum flux bins
     float maxFlux = -std::numeric_limits<float>::max();
@@ -39,10 +41,13 @@ void PlotFlux(const Config &config)
         const auto nBins = fluxBinEdges.size() - 1;
         auto pHist = std::make_shared<TH1F>(name.c_str(), "", nBins, fluxBinEdges.data());
 
+        float totalFlux = 0.f;
+
         // Fill the histogram
         for (unsigned int iBin = 1; iBin <= nBins; ++iBin)
         {
             const auto binContent = fluxValues.at(iBin - 1);
+            totalFlux += binContent;
             pHist->SetBinContent(iBin, binContent);
 
             // Get the minimum and maximum values (provided this bin isn't zero)
@@ -55,6 +60,7 @@ void PlotFlux(const Config &config)
 
         // Add the hisogram to the map
         histMap.emplace(pdg, pHist);
+        totalFluxMap.emplace(pdg, totalFlux);
     }
 
     // Set the line colours
@@ -92,6 +98,17 @@ void PlotFlux(const Config &config)
     }
 
     PlottingHelper::SaveCanvas(pCanvas, "plotFlux_allFluxes");
+
+    // Print the total flux
+    FormattingHelper::Table table({"PDG", "", "Flux"});
+    for (const auto &pdg : {+14, -14, +12, -12})
+    {
+        table.AddEmptyRow();
+        table.SetEntry("PDG", pdg);
+        table.SetEntry("Flux", totalFluxMap.at(pdg));
+    }
+
+    table.WriteToFile("plotFlux_totalFluxes.md");
 }
 
 } // namespace ubcc1pi_macros

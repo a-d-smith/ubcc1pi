@@ -416,7 +416,7 @@ class CrossSectionHelper
                 ubsmear::UBMatrix GetBNBDataCrossSection(const ScalingData &scalingData) const;
 
                 /**
-                *  @brief  Get the predicted flux-integrated forward-folded cross-section in the nominal universe
+                *  @brief  Get the predicted flux-integrated cross-section in the nominal universe (truth space)
                 *
                 *  @param  scalingData the information about how we should scale the event rate to get the cross-section
                 *

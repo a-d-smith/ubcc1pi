@@ -169,8 +169,10 @@ class PlottingHelper
                  *  @param  useLogX if we should use a log scale on the X-axis
                  *  @param  scaleByBinWidth if we should scale by bin width
                  *  @param  useLogY if we should use a log scale on the Y-axis
+                 *  @param  yLowerLimit manually set the y-axis lower limit (if negative limit is chosen automatically)
+                 *  @param  yUpperLimit manually set the y-axis lower limit (if negative limit is chosen automatically)
                  */
-                void SaveAsStacked(const std::string &fileName, const bool useLogX = false, const bool scaleByBinWidth = false, const bool useLogY = false);
+                void SaveAsStacked(const std::string &fileName, const bool useLogX = false, const bool scaleByBinWidth = false, const bool useLogY = false, const float yLowerLimit = -1.f, const float yUpperLimit = -1.f);
 
             private:
                 /**

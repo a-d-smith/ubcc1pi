@@ -43,6 +43,13 @@ namespace ubcc1pi_macros
     void TruthStudy(const Config &config = Config());
 
     /**
+     *  @brief  Count the number of true CC1Pi events and count those that have a numubar
+     *
+     *  @param  config the input configuration
+     */
+    void CountNuMuBars(const Config &config = Config());
+
+    /**
      *  @brief  Look at the truth information relating to secondary interactions
      *
      *  @param  config the input configuration
@@ -90,6 +97,13 @@ namespace ubcc1pi_macros
      *  @param  config the input configuration
      */
     void PlotPionInputVariables(const Config &config = Config());
+
+    /**
+     *  @brief  Get some event IDs for pions with various values for wigglines
+     *
+     *  @param  config the input configuration
+     */
+    void FindWigglyPions(const Config &config = Config());
 
     /**
      *  @brief  Get the correlation plots between the input variables to the BDT
@@ -181,6 +195,13 @@ namespace ubcc1pi_macros
     *  @param  config the input configuration
     */
     void DumpSelectedEventInfo(const Config &config = Config());
+
+    /**
+    *  @brief  Plot the reconstructed neutrino energy and the hadronic invariant mass
+    *
+    *  @param  config the input configuration
+    */
+    void PlotModelDependentQuantities(const Config &config = Config());
 
     /**
      *  @brief  Make the plots to motivate the binning choice

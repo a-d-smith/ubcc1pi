@@ -285,7 +285,7 @@ void PlottingHelper::MultiPlot::SaveAs(const std::string &fileName, const bool u
 
 // -----------------------------------------------------------------------------------------------------------------------------------------
 
-void PlottingHelper::MultiPlot::SaveAsStacked(const std::string &fileName, const bool useLogX, const bool scaleByBinWidth, const bool useLogY)
+void PlottingHelper::MultiPlot::SaveAsStacked(const std::string &fileName, const bool useLogX, const bool scaleByBinWidth, const bool useLogY, const float yLowerLimit, const float yUpperLimit)
 {
     auto pCanvas = PlottingHelper::GetCanvas();
 
@@ -363,6 +363,22 @@ void PlottingHelper::MultiPlot::SaveAsStacked(const std::string &fileName, const
     yMax = std::max(yMax, static_cast<float>(pHistTotal->GetMaximum()));
     yMax *= 1.05;
 
+    // Add some padding to the yMinNonZero
+    yMinNonZero *= 0.9f;
+
+    // Override the Y min / max if specified
+    float yMin = 0.f;
+    if (yLowerLimit > 0.f)
+    {
+        yMinNonZero = yLowerLimit;
+        yMin = yLowerLimit;
+    }
+
+    if (yUpperLimit > 0.f)
+    {
+        yMax = yUpperLimit;
+    }
+
     // Draw the stacked histogram
     const auto nameStackStr = "ubcc1pi_plotPlot_" + std::to_string(m_id) + "_stack";
     const auto nameStack = nameStackStr.c_str();
@@ -391,12 +407,12 @@ void PlottingHelper::MultiPlot::SaveAsStacked(const std::string &fileName, const
     if (useLogY)
     {
         // Add some padding at the bottom
-        pHistStack->SetMinimum(yMinNonZero * 0.9);
+        pHistStack->SetMinimum(yMinNonZero);
         pCanvas->SetLogy();
     }
     else
     {
-        pHistStack->SetMinimum(0.f);
+        pHistStack->SetMinimum(yMin);
     }
 
     pHistStack->SetMaximum(yMax / (1+gStyle->GetHistTopMargin()));
@@ -420,8 +436,15 @@ void PlottingHelper::MultiPlot::SaveAsStacked(const std::string &fileName, const
     // Draw the cut lines
     for (const auto &cutValue : m_cutValues)
     {
+        TLine *pLineOutline = new TLine(cutValue, 0.f, cutValue, yMax);
         TLine *pLine = new TLine(cutValue, 0.f, cutValue, yMax);
+        pLineOutline->SetLineWidth(6);
         pLine->SetLineWidth(2);
+
+        pLineOutline->SetLineColor(kWhite);
+        pLine->SetLineColor(kBlack);
+
+        pLineOutline->Draw();
         pLine->Draw();
     }
 
@@ -496,8 +519,15 @@ void PlottingHelper::MultiPlot::SaveAsStacked(const std::string &fileName, const
     // Draw the cut lines
     for (const auto &cutValue : m_cutValues)
     {
+        TLine *pLineOutline = new TLine(cutValue, ratioYMin, cutValue, ratioYMax);
         TLine *pLine = new TLine(cutValue, ratioYMin, cutValue, ratioYMax);
+        pLineOutline->SetLineWidth(6);
         pLine->SetLineWidth(2);
+
+        pLineOutline->SetLineColor(kWhite);
+        pLine->SetLineColor(kBlack);
+
+        pLineOutline->Draw();
         pLine->Draw();
     }
 

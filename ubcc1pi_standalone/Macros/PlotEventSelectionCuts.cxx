@@ -55,7 +55,7 @@ void PlotEventSelectionCuts(const Config &config)
     PlottingHelper::MultiPlot nNonProtonsPlot("Number of non-protons", yLabelEvents, 5u, 1, 6);
     PlottingHelper::MultiPlot pionNotInGapBeforePlot("Pion phi / rad", yLabelEvents, 40u, -3.142f, 3.142f);
     PlottingHelper::MultiPlot pionNotInGapAfterPlot("Pion phi / rad", yLabelEvents, 40u, -3.142f, 3.142f);
-    PlottingHelper::MultiPlot openingAnglePlot("Muon-Pion opening angle / rad", yLabelEvents, 40u, 0.f, 3.142f);
+    PlottingHelper::MultiPlot openingAnglePlot("Muon-Pion opening angle / rad", yLabelEvents, 40u, -0.4f, 3.142f);
     PlottingHelper::MultiPlot topologicalScorePlot("TopologicalScore", yLabelEvents, 40u, 0.06f, 1.f);
     PlottingHelper::MultiPlot startNearVertexParticlePlot("Distance to vertex / cm", yLabelParticles, PlottingHelper::GenerateLogBinEdges(40u, 0.03f, 1000.f));
     PlottingHelper::MultiPlot startNearVertexEventPlot("Min distance to vertex / cm", yLabelEvents, PlottingHelper::GenerateLogBinEdges(40u, 0.15f, 1000.f));
@@ -291,9 +291,9 @@ void PlotEventSelectionCuts(const Config &config)
     protonBDTResponsePlot.SaveAsStacked("plotEventSelectionCuts_2NonProtons_protonBDTResponse");
     nNonProtonsPlot.SaveAsStacked("plotEventSelectionCuts_2NonProtons_nNonProtons");
     openingAnglePlot.SaveAsStacked("plotEventSelectionCuts_openingAngle_openingAngle");
-    pionNotInGapBeforePlot.SaveAsStacked("plotEventSelectionCuts_pionNotInGap_pionPhi-before");
-    pionNotInGapAfterPlot.SaveAsStacked("plotEventSelectionCuts_pionNotInGap_pionPhi-after");
-    topologicalScorePlot.SaveAsStacked("plotEventSelectionCuts_topologicalScore_topologicalScore", false, false, true);
+    pionNotInGapBeforePlot.SaveAsStacked("plotEventSelectionCuts_pionNotInGap_pionPhi-before", false, false, false, -1.f, 450.f);
+    pionNotInGapAfterPlot.SaveAsStacked("plotEventSelectionCuts_pionNotInGap_pionPhi-after", false, false, false, -1.f, 330.f);
+    topologicalScorePlot.SaveAsStacked("plotEventSelectionCuts_topologicalScore_topologicalScore", false, false, true, 20.f);
     startNearVertexParticlePlot.SaveAsStacked("plotEventSelectionCuts_startNearVertex_vertexDist_allParticles", true);
     startNearVertexEventPlot.SaveAsStacked("plotEventSelectionCuts_startNearVertex_vertexDist_furthestParticle", true);
     likelyGoldenPionParticlePlot.SaveAsStacked("plotEventSelectionCuts_likelyGoldenPion_goldenPionBDTResponse_particles");
